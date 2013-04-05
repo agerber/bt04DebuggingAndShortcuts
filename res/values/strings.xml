@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Main!</string>
+    <string name="app_name">Debugging And Shortcuts</string>
+
+    <string-array name="hello_array">
+        <item>Hello</item>
+        <item>there</item>
+        <item>this</item>
+        <item>is</item>
+        <item>Android</item>
+    </string-array>
+
+</resources>

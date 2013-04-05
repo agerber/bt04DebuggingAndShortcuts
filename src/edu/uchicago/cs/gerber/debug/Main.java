@@ -36,11 +36,53 @@ public class Main extends Activity implements OnClickListener   {
    	@Override
    	public void onClick(View v) {
 
-   		//String strBuild = getStringArray();
-   		//txtShow.setText(strBuild);
+   		String strBuild = getStringArray();
+   		txtShow.setText(strBuild);
    		
    		
    	}
+   	
+   	
+	// %%%%%%%%%%%%%% PHASE FINISHED
+	private String getStringArray() {
+		//set some breakpoints here in this method
+		String[] strWords = getResources().getStringArray(R.array.hello_array);
+		
+		String strBuild = "";
+		for (String str : strWords) {
+			
+			strBuild += str + " ";
+		}
+		//set a breakpoint at line below 
+		strBuild += "\n" + convertToAscii(strBuild);
+		return strBuild;
+	}
+	
+	// %%%%%%%%%%%%%% PHASE FINISHED
+	private String convertToAscii(String strSentence){
+		
+	   //declare some vars
+	   String strR = "";
+	   char cChar;
+	   int nCode;
+	   
+	   //iterate over the string
+		for (int nC = 0; nC < strSentence.length()-1; nC++) {
+			cChar = strSentence.charAt(nC);
+			nCode = (int) cChar;
+		    strR += nCode + ":";
+		}
+		
+		//convert the last character
+		cChar = strSentence.charAt(strSentence.length()-1);
+		nCode = (int) cChar;
+		strR += nCode;
+
+		//return the built string
+		return strR;
+		
+	
+	}
 
 
 
